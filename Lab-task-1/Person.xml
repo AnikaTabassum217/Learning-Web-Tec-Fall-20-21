@@ -1,0 +1,17 @@
+<persons>
+	<person sl="23">
+		<name>John Carter</name>
+		<admission_date>25/12/2015</admission_date>
+    </person>
+    <person sl="29">
+		<name>Bob Marshal</name>
+		<admission_date>13/01/1999</admission_date>
+    </person>
+    <person sl="35">
+		<name>Clark Kent</name>
+		<admission_date>17/06/2005</admission_date>
+    </person>
+</persons>
+
+
+		
