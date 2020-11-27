@@ -16,7 +16,7 @@
 </head>
 <body>
 	<h1>Welcome Home! </h1>
-	<a href="profile.php">Profile</a> <br>
+	
 	<a href="Create.php">Create</a> <br>
 	
 	<a href="logout.php">logout</a><br>
