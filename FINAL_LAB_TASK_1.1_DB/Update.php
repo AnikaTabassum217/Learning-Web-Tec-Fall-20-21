@@ -59,7 +59,7 @@
 		<legend>Update</legend>
 
 		    <label for="id">ID</label><br/>
-			<input type="number" id="id" name="id" value="<?= $data['id'] ?>" style="margin-top:5px;"></input><br/> 
+			<input type="number" id="id" name="id" value="<?= $data['id'] ?>" readonly style="margin-top:5px;"></input><br/> 
 			
 			<label for="id">User Name</label><br/>
 			<input type="text" id="id" name="Username" value="<?= $data['username'] ?>" style="margin-top:5px;"></input><br/>
