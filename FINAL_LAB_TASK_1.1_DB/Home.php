@@ -30,6 +30,7 @@
 			<td>Password</td>
 			<td>Email</td>
 			<td>Type</td>
+			<td>Action</td>
 		</tr>
 
 		<?php 
@@ -41,6 +42,10 @@
 					<td><?= $data['password'] ?></td>
 					<td><?= $data['email'] ?></td>
 					<td><?= $data['type'] ?></td>
+					<td>
+						<a href="Update.php?id=<?= $data['id'] ?>"> EDIT</a> |
+						<a href="Delete.php?id=<?= $data['id'] ?>"> DELETE</a> 
+					</td>
 				</tr>
 
 		<?php } ?>
