@@ -1,24 +1,24 @@
 <?php
 	require_once('../php/header.php');
-	require_once('../models/usersService.php');
+	require_once('../models/employeesService.php');
 	
 		
 	$data = "";     
-	$err = "";       //
+	$err = "";      
 
-	if(isset($_POST['submit'])){   //
+	if(isset($_POST['submit'])){   
 		$err = "";  
-		$employeeName = $_POST['employeeName'];
-		$contactNo = $_POST['contactNo'];
-		$Username = $_POST['Username'];
+		$Employeename = $_POST['Employeename'];
+		$Contactno = $_POST['Contactno'];
+		$Username=$_POST['Username'];
 		$Password = $_POST['Password'];
 		
 	
 		  
-		if(empty($employeeName)) {
-			$err = $err . "employeeName name required<br/>";
-		} if(empty($contactNo)) {
-			$err = $err . "contactNo required<br/>";
+		if(empty($Employeename)) {
+			$err = $err . "Employeename required<br/>";
+		} if(empty($Contactno)) {
+			$err = $err . "Contactno required<br/>";
 		} if(empty($Username)) {
 			$err = $err . "Username required<br/>";
 		} if(empty($Password)) {
@@ -28,19 +28,19 @@
 		
 		if(str_word_count($err)==0){            // error count is 0    
 			$employee = [
-			    'eployeename'=> $employeeName,
-				'contactno'=> $contactNo,
+			    'employeename'=> $Employeename,
+				'contactno'=> $Contactno,
 				'username'=> $Username,
 				'password'=> $Password,
 				
 			];	
 
-			$result = insertEmployee($employee);
+			$result = insertEmployees($employee);
 
 			if($result){
-				header('location: ../view/userList.php');
+				header('location: ../view/employeeList.php');
 			}else{
-				$err = "User create failed";
+				$err = "Employee create failed";
 				header('location: ../php/create.php');
 			}
 		}
@@ -62,14 +62,12 @@
 	
 		<fieldset style="width:220px">
 		<legend>Create </legend>
-		
-		
-			
-			<label for="id">Employee Name</label><br/>
-			<input type="text" id="id" name="employeeName" value="" style="margin-top:5px;"></input><br/>
+		     
+			 <label for="id">Employee Name</label><br/>
+			<input type="text" id="id" name="Employeename" value="" style="margin-top:5px;"></input><br/>
 			
 			<label for="id">Contact No</label><br/>
-			<input type="text" id="id" name="contactNo" value="" style="margin-top:5px;"></input><br/>
+			<input type="number" id="id" name="Contactno" value="" style="margin-top:5px;"></input><br/>
 			
 			<label for="id">User Name</label><br/>
 			<input type="text" id="id" name="Username" value="" style="margin-top:5px;"></input><br/>
@@ -77,8 +75,6 @@
 			<label for="id">Password</label><br/>
 			<input type="password" id="id" name="Password" value="" style="margin-top:5px;"></input><br/>
 
-			
-		  
 		  <input type="submit" name="submit" value="Submit" style="margin-top:5px;"> <!--        -->
 		</fieldset>
 	</form> 
