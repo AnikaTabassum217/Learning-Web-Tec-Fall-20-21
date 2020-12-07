@@ -1,8 +1,3 @@
-"use strict"
-
-
-
-
 function f1(){
 	var  data= document.getElementById('name').value;
 	
@@ -23,6 +18,15 @@ function f1(){
         }
 
 }
-
-
-
+}
+function f2(){
+    
+    let data = document.getElementById('email').value;
+    
+    if (data === "") {
+        
+        window.alert('Email is empty!');
+        
+    }
+    
+}
