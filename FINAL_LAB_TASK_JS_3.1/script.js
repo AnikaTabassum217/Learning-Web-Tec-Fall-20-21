@@ -1,24 +1,28 @@
-/*function f1(){
+function ValidatedName(){
 	var  data= document.getElementById('name').value;
 	
-	if (data == "") {
+	if (data === "") {
         
       window.alert('name empty!');
         
     }
-	
-	 else {
+
+    else if (data.substr(0, 1).match(/[A-Za-z]/) == null)
+   {
+      window.alert('Name is not Validated');
+   }
+
+	 else{
         
-        var name = data.split(" ");
+    var name = data.split(" ");
+    
+    if (name.length < 2) {
         
-        if (name.length < 0) {
-            
-            window.alert('empty');
-            
-        }
+        window.alert('Less than 2 word');  
+    }
+   }    
 
 }
-}*/
 
 function ValidateEmail(){
     
@@ -65,29 +69,99 @@ function ValidateEmail(){
 function ValidatedDOB(){ 
 
      var  date= document.getElementById('dd').value;
-     var  mm= document.getElementById('mm').value;
-     var  yyyy= document.getElementById('yyyy').value;
-    
+     
     if (date === "") {
         
          window.alert('Date is empty!');   
     } else if(date<0 || date>31) {
         window.alert("Invalid date");
     }
+
+    else
+    {
+        window.alert("Valid date");
+    }
+
+    var  mm= document.getElementById('mm').value;
+     if (mm === "") {
+        
+         window.alert('mm is empty!');   
+    } else if(mm<0 || mm>12) {
+        window.alert("Invalid mm");
+    }
     
+    
+    var  yyyy= document.getElementById('yyyy').value;
+     
 
-
-    // else if (mm === "") {
-
-    //     window.alert('MOnth is empty'); 
-    // } 
-    //  else  if(yyyy === "")
-    // { 
-    //  window.alert('Year is empty'); 
-    // } 
+     if (yyyy === "") {
+        
+         window.alert('yyyy is empty!');   
+    } else if(yyyy<1900 || yyyy>2016) {
+        window.alert("Invalid yyyy");
+    }
 
     
 }  
+
+function ValidateDegree(){
+    
+    var data = document.getElementsByName('degree');
+    
+    if (data === "") {
+        
+         window.alert('Degree is empty!');   
+    }
+
+    else if( ( data[0].checked == false ) && ( data[1].checked == false ) && ( data[2].checked == false ) ) {
+        window.alert ( 'Degree is not Validated'); 
+    }   
+   
+    else  {
+        window.alert('Degree is Validated');
+    }
+    
+}
+
+
+
+
+
+function ValidateBloodGroup(){
+    
+    var data = document.getElementById('bloodgroup').value;
+    
+    if (data === "") {
+        
+        window.alert('bloodgroup is empty!');   
+    } else {
+       window.alert('bloodgroup is valid!');  
+    }
+
+    
+}
+
+
+function ValidateProfile(){
+    
+    var data = document.getElementById('picture').value;
+    
+
+    if (data === "") {
+        
+        window.alert('picture is empty!');   
+    }
+
+     var d = document.getElementById('userId').value;
+
+    if (d === "") {
+        
+        window.alert('userId is empty!');   
+    }
+
+
+    
+}
 
 
 
