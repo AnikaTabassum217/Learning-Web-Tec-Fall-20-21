@@ -32,6 +32,22 @@
 
 		return $employee;
 	}
+	
+	function getByEmployeeName($employeename){
+
+		$conn = getConnection();
+		$sql = "select * from employees where employeename='".$employeename."'";
+		$result = mysqli_query($conn, $sql);
+
+		$employee =[];
+
+		while($data = mysqli_fetch_assoc($result)){
+			array_push($employee, $data);//array_push() function inserts one or more elements to the end of an array
+		}
+
+		return $employee;
+	}
+
 
 
 	function getAllEmployee(){
