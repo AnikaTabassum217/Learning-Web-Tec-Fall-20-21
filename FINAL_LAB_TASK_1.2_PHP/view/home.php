@@ -13,6 +13,7 @@
 	
 	<a href="../php/create.php">Create New User</a> <br>
 	<a href="employeeList.php">Employees List</a> <br>
+	<a href="employeeSearch.php">Employees Search</a> <br>
 	<a href="../php/logout.php">logout</a>
 </body>
 </html>
