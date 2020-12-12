@@ -68,16 +68,16 @@
 			<input type="number" id="id" name="id" value="<?= $data[0]['id'] ?>" readonly style="margin-top:5px;"></input><br/> 
 			
 			<label for="id">Employee Name</label><br/>
-			<input type="text" id="id" name="Employeename" value="" style="margin-top:5px;"></input><br/>
+			<input type="text" id="id" name="Employeename" value="<?= $data[0]['employeename'] ?>" style="margin-top:5px;"></input><br/>
 			
 			<label for="id">Contact No</label><br/>
-			<input type="number" id="id" name="Contactno" value="" style="margin-top:5px;"></input><br/>
+			<input type="number" id="id" name="Contactno" value="<?= $data[0]['contactno'] ?>" style="margin-top:5px;"></input><br/>
 			
 			<label for="id">User Name</label><br/>
-			<input type="text" id="id" name="Username" value="" style="margin-top:5px;"></input><br/>
+			<input type="text" id="id" name="Username" value="<?= $data[0]['username'] ?>" style="margin-top:5px;"></input><br/>
 			
 			<label for="id">Password</label><br/>
-			<input type="password" id="id" name="Password" value="" style="margin-top:5px;"></input><br/>
+			<input type="password" id="id" name="Password" value="<?= $data[0]['password'] ?>" style="margin-top:5px;"></input><br/>
 		  <input type="submit" name="submit" value="Submit" style="margin-top:5px;"> <!--        -->
 		</fieldset>
 	</form> 
