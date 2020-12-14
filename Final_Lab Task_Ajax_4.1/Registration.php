@@ -27,7 +27,7 @@
 					<input type="radio" />User
 					<input type="radio" />Admin
 					<hr/>
-					<input type="submit" value="Sign Up">
+					<input type="submit" value="Sign Up" onclick="ajax()">
 					<a href="login.html">Sign In</a>
 				</fieldset>
 			</td>
