@@ -37,7 +37,8 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><input type="submit" name="submit" value="Submit" onclick="ajax()"></td>
+					<td><input type="submit" name="submit" value="Submit" ></td>
+					<td><input type="button" name="button" value="Click" onclick="ajax()"></td>
 				</tr>
 			</table>
 		</fieldset>
