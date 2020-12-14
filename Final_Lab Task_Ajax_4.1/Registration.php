@@ -28,6 +28,7 @@
 					<input type="radio" />Admin
 					<hr/>
 					<input type="submit" value="Sign Up" onclick="ajax()">
+					<td><input type="button" name="button" value="Click" onclick="ajax()"></td>
 					<a href="login.html">Sign In</a>
 				</fieldset>
 			</td>
