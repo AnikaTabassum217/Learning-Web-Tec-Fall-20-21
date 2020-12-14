@@ -6,6 +6,7 @@ function ajax(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.open('REQUEST', 'Login.php', true);
 	xhttp.open('REQUEST', 'Registration.php', true);
+	xhttp.open('REQUEST', 'changePassword.php', true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xhttp.onreadystatechange = function(){
@@ -16,4 +17,5 @@ function ajax(){
 	}
 	
 	xhttp.send('name='+data);
+	xhttp.send('msg='+data);
 }
